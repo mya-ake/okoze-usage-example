@@ -1,0 +1,47 @@
+{
+  "name": "okoze-usage-example",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "test:e2e": "vue-cli-service test:e2e",
+    "test:unit": "vue-cli-service test:unit",
+    "server:start": "ts-node --project server/tsconfig.json server/index.ts"
+  },
+  "dependencies": {
+    "consola": "^2.9.0",
+    "core-js": "^2.6.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "ky": "^0.11.1",
+    "tailwindcss": "^1.0.4",
+    "vue": "^2.6.10",
+    "vue-router": "^3.0.3",
+    "vue-use-reducer": "^1.0.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.5",
+    "@types/dotenv": "^6.1.1",
+    "@types/express": "^4.17.0",
+    "@types/jest": "^23.1.4",
+    "@vue/cli-plugin-babel": "^3.8.0",
+    "@vue/cli-plugin-e2e-cypress": "^3.8.0",
+    "@vue/cli-plugin-eslint": "^3.8.0",
+    "@vue/cli-plugin-typescript": "^3.8.0",
+    "@vue/cli-plugin-unit-jest": "^3.8.0",
+    "@vue/cli-service": "^3.8.0",
+    "@vue/eslint-config-prettier": "^4.0.1",
+    "@vue/eslint-config-typescript": "^4.0.0",
+    "@vue/test-utils": "1.0.0-beta.29",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "ts-jest": "^23.0.0",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.4.3",
+    "vue-template-compiler": "^2.6.10"
+  }
+}
