@@ -9,7 +9,10 @@ export const requestSignIn = async ({
   password: string;
 }): Promise<ApiResponse<SignInData> | ApiErrorResponse> => {
   const body = { id, password };
-  const { status, data } = await http('sign-in', { method: 'post', body });
+  const { status, data } = await http.request('sign-in', {
+    method: 'post',
+    body,
+  });
   if (status === 200) {
     return {
       ok: true,

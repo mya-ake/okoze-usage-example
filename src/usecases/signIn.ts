@@ -1,5 +1,5 @@
 import { requestSignIn } from '@/api/signIn';
-import { authDispatch } from '@/store/auth';
+import { authenticate } from './auth';
 
 type SignInResult = {
   ok: boolean;
@@ -24,7 +24,7 @@ export const signIn = async ({
   }
 
   const { token } = response.data;
-  authDispatch({ type: 'AUTHENTICATE', payload: { token } });
+  authenticate(token);
   return {
     ok: true,
     token,

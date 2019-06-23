@@ -1,18 +1,14 @@
 import { useReducer, VueUseReducer } from 'vue-use-reducer';
 
 interface State extends VueUseReducer.State {
-  token: string;
   authenticated: boolean;
 }
 
 const createInitialState = (): State => {
   return {
-    token: '',
     authenticated: false,
   };
 };
-
-const state = createInitialState();
 
 type AuthenticateAction = {
   type: 'AUTHENTICATE';
@@ -32,7 +28,6 @@ const reducer: VueUseReducer.Reducer<State, Action> = (state, action) => {
     case 'AUTHENTICATE':
       return {
         ...state,
-        token: action.payload.token,
         authenticated: true,
       };
     case 'SIGN_OUT':
@@ -40,6 +35,6 @@ const reducer: VueUseReducer.Reducer<State, Action> = (state, action) => {
   }
 };
 
-const [authState, authDispatch] = useReducer(reducer, state);
+const [authState, authDispatch] = useReducer(reducer, createInitialState());
 
 export { authState, authDispatch };
