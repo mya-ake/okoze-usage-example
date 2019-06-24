@@ -2,7 +2,7 @@ import { http } from '@/lib/http';
 import { authDispatch } from '@/store/auth';
 
 export const authenticate = (token: string) => {
-  authDispatch({ type: 'AUTHENTICATE', payload: { token } });
+  authDispatch({ type: 'AUTHENTICATE' });
   http.setToken(token);
 };
 

@@ -10,18 +10,9 @@ const createInitialState = (): State => {
   };
 };
 
-type AuthenticateAction = {
-  type: 'AUTHENTICATE';
-  payload: {
-    token: string;
-  };
+type Action = {
+  type: 'AUTHENTICATE' | 'SIGN_OUT';
 };
-
-type Action =
-  | AuthenticateAction
-  | {
-      type: 'SIGN_OUT';
-    };
 
 const reducer: VueUseReducer.Reducer<State, Action> = (state, action) => {
   switch (action.type) {
